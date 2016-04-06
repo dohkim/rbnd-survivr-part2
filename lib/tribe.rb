@@ -1,10 +1,11 @@
+require 'colorizr'
 class Tribe
   attr_reader :name, :members
   
   def initialize(options={})
     @name=options[:name] if options[:name]
     @members=options[:members] if options[:members]
-    puts "#{@name}, #{@members}"
+    puts "Tribe name : #{@name.red}, Members : #{@members.map {|member| member.name}}"
   end
   
   def tribal_council(immune:)

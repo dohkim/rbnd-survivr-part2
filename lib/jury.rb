@@ -14,16 +14,16 @@ class Jury
       @votes[finalist.name]=0
     end
     
-    @members.size.times do 
+    @members.each do |member|
       @votes[finalists.sample.name] += 1
-      puts "Someone voted"
+      p "#{member} voted"
     end
     @votes
   end
   
   def report_votes(final_votes)
     final_votes.each do |k, v|
-      puts "#{k} : #{v}"
+      p "#{k} : #{v}"
     end
   end
   
