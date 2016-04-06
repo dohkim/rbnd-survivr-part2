@@ -29,7 +29,8 @@ class Jury
   
   def announce_winner(final_votes)
     final_votes.sort_by {|k,v| v}
-    final_votes.keys.first
+    p "Final Winner"
+    p final_votes.keys.first
   end
       
 end
