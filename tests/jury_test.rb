@@ -29,6 +29,7 @@ class TestJury < Minitest::Test
   end
   
   def test_cast_votes_hash_includes_two_finalists
+    @jury.members = @jury_members
     assert_equal 2, @jury.cast_votes(@finalists).length
   end
   
